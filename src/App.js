@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/Card/Card';
 
 function App() {
+  const cardParams = {
+    title: 'Card title',
+    text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+    buttonText: 'Go somewhere',
+    buttonType: 'primary',
+    buttonLink: '#'
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Card {...cardParams}>
+    <svg className="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+    </Card>
+    <Card title="Empry card" />
+    </>
   );
 }
 
